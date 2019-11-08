@@ -9,10 +9,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 public class memo1 extends Fragment {
 
     private RecyclerView listcheckrecycler;
+    private MainActivity mainActivity;
+    private ImageView back_button1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,15 @@ public class memo1 extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.activity_memo1, container, false);
 
         listcheckrecycler = view.findViewById(R.id.recycler_checklist);
+        back_button1 = view.findViewById(R.id.memo1_backbutton);
+        back_button1.setClickable(true);
+        back_button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainActivity = (MainActivity) getActivity();
+                mainActivity.onFragmentchange_memo(0);
+            }
+        });
 
         return view;
     }
