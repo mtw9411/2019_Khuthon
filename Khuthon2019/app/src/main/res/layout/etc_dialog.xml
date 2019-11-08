@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etc_diatitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@mipmap/etcname"
+        android:ems="10"
+        android:hint="제목"
+        android:inputType="textPersonName"
+        android:paddingStart="20sp"
+        android:paddingEnd="20sp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etc_diacont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp"
+        android:background="@mipmap/etcmeno"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="메모"
+        android:inputType="textPersonName"
+        android:padding="20sp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/etc_diatitle"
+        app:layout_constraintStart_toStartOf="@+id/etc_diatitle"
+        app:layout_constraintTop_toBottomOf="@+id/etc_diatitle" />
+
+    <Button
+        android:id="@+id/setbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="입력"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etc_diacont"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/etc_diacont"
+        app:layout_constraintTop_toBottomOf="@+id/etc_diacont"
+        app:layout_constraintVertical_bias="0.042" />
+</android.support.constraint.ConstraintLayout>
