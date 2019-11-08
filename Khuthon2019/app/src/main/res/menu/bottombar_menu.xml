@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuitem_bottombar_home"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="HOME"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menuitem_bottombar_memo"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="MEMO"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/menuitem_bottombar_story"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="STORY"
+        app:showAsAction="ifRoom"/>
+</menu>
