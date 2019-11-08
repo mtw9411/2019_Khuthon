@@ -34,8 +34,13 @@
             android:id="@+id/popUpDate_finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="확인">
+            android:layout_marginLeft="18dp"
+            android:text="확인"
+            android:padding="3dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="#45a4ce"
+            android:background="@drawable/blue_round">
         </TextView>
     </LinearLayout>
 </LinearLayout>
