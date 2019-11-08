@@ -11,10 +11,10 @@
         android:id="@+id/memo_checklist"
         android:layout_width="130dp"
         android:layout_height="188dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="53dp"
-        android:src="@color/colorAccent"
+        android:src="@mipmap/check_list_sq"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -26,7 +26,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:src="@color/colorPrimary"
+        android:src="@mipmap/plans_sq"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/memo_checklist"
         app:layout_constraintTop_toTopOf="@+id/memo_checklist" />
@@ -36,7 +36,7 @@
         android:layout_width="130dp"
         android:layout_height="188dp"
         android:layout_marginTop="28dp"
-        android:src="@color/colorPrimaryDark"
+        android:src="@mipmap/foodlist_s_q"
         app:layout_constraintStart_toStartOf="@+id/memo_checklist"
         app:layout_constraintTop_toBottomOf="@+id/memo_checklist" />
 
@@ -48,7 +48,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:src="@color/design_default_color_primary"
+        android:src="@mipmap/etc_sq"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/memo_things"
         app:layout_constraintTop_toTopOf="@+id/memo_things" />
@@ -57,13 +57,14 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="MEMO"
         android:textColor="#ffffff"
         android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
