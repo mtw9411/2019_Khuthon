@@ -6,6 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_choose"
+            android:text="Choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_upload"
+            android:text="Upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -15,6 +47,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:isScrollContainer="true"
         android:id="@+id/Frame_navi">
+
 
     </FrameLayout>
 
