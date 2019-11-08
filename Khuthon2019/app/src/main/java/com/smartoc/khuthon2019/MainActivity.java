@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
-    private navi_home navi_home = new navi_home();
     private navi_memo navi_memo = new navi_memo();
     private navi_story navi_story = new navi_story();
     private memo1 memo1 = new memo1();
@@ -52,20 +51,16 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
 
-                    case R.id.menuitem_bottombar_home:
+                    case R.id.menuitem_bottombar_memo:
                         setFrag(0);
 
                         return true;
 
-                    case R.id.menuitem_bottombar_memo:
+                    case R.id.menuitem_bottombar_story:
                         setFrag(1);
 
                         return true;
 
-                    case R.id.menuitem_bottombar_story:
-                        setFrag(2);
-
-                        return true;
                 }
                 return false;
             }
@@ -78,16 +73,11 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction = fragmentManager.beginTransaction();
         switch (n){
             case 0:
-                fragmentTransaction.replace(R.id.Frame_navi, navi_home);
+                fragmentTransaction.replace(R.id.Frame_navi, navi_memo);
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null); //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
                 break;
             case 1:
-                fragmentTransaction.replace(R.id.Frame_navi, navi_memo);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
-                fragmentTransaction.commit();
-                fragmentTransaction.addToBackStack(null);
-                break;
-            case 2:
                 fragmentTransaction.replace(R.id.Frame_navi, navi_story);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
