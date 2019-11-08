@@ -1,6 +1,7 @@
 package com.smartoc.khuthon2019;
 
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private memo2 memo2 = new memo2();
     private memo3 memo3 = new memo3();
     private memo4 memo4 = new memo4();
+    private story1 story1 = new story1();
 
     private BottomNavigationView bottom_navi;
 
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = new Intent(this, splashActivity.class);
+        startActivity(intent);
+
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
 
@@ -104,6 +110,14 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (index ==4){
             getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, memo4).commit();
+        }
+    }
+    public void onFragmentchange_story(int index){
+        if (index == 0){
+            getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, navi_memo).commit();
+        }
+        else if (index ==1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, story1).commit();
         }
     }
 }
