@@ -70,10 +70,13 @@ public class navi_story extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         adapter = new RecyclerAdapter(tripList);
         recyclerView.setAdapter(adapter);
+
+        adapter.notifyDataSetChanged();
 
 
 
@@ -130,7 +133,7 @@ public class navi_story extends Fragment {
             //Unique한 파일명을 만들자.
             SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMHH_mmss");
             Date now = new Date();
-            String filename = formatter.format(now) + ".png";
+            final String filename = formatter.format(now) + ".png";
             //storage 주소와 폴더 파일명을 지정해 준다.
             storageRef = storage.getReferenceFromUrl("gs://khuthon2019-f55e9.appspot.com").child("images/" + filename);
             //올라가거라...
@@ -141,6 +144,10 @@ public class navi_story extends Fragment {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss(); //업로드 진행 Dialog 상자 닫기
                             Toast.makeText(getContext(), "업로드 완료!", Toast.LENGTH_SHORT).show();
+                            TripDTO trip = new TripDTO();
+                            trip.setImgName(filename);
+                            tripList.add(trip);
+                            adapter.notifyDataSetChanged();
                         }
                     })
                     //실패시
@@ -188,12 +195,12 @@ public class navi_story extends Fragment {
         @Override
         public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
 
-            TripDTO trip = listData.get(position-1);
+            TripDTO trip = listData.get(position);
 
             // 이미지 설정
             if(trip.getImgName() != null) {
                 String fileName = trip.getImgName();
-                storageRef.child("roomImages/" + fileName).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                storageRef.child("images/" + fileName).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
                         ((ItemViewHolder)holder).story_img.setImageURI(uri);
@@ -203,24 +210,12 @@ public class navi_story extends Fragment {
             }
 
             // Item을 하나, 하나 보여주는(bind 되는) 함수입니다.
-            TripDTO tripDTO = listData.get(position);
-            String title = tripDTO.getTitle();
-            String note = tripDTO.getNote();
-
-            ((RecyclerAdapter.ItemViewHolder)holder).story_title.setText(title) ;
-            ((RecyclerAdapter.ItemViewHolder)holder).story_note.setText(note) ;
-
         }
 
         @Override
         public int getItemCount() {
             // RecyclerView의 총 개수 입니다.
             return listData.size();
-        }
-
-        void addItem(TripDTO data) {
-            // 외부에서 item을 추가시킬 함수입니다.
-            listData.add(data);
         }
 
         // RecyclerView의 핵심인 ViewHolder 입니다.
@@ -239,37 +234,6 @@ public class navi_story extends Fragment {
             }
         }
     }
-    public class Data {
-
-        private String title;
-        private String content;
-        private int resId;
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getContent() {
-            return content;
-        }
-
-        public void setContent(String content) {
-            this.content = content;
-        }
-
-        public int getResId() {
-            return resId;
-        }
-
-        public void setResId(int resId) {
-            this.resId = resId;
-        }
-    }
-
 
 
 
