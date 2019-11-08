@@ -215,7 +215,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onFragmentchange_memo(int index){
-        if (index ==1){
+        if (index == 0){
+            getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, navi_memo).commit();
+        }
+        else if (index ==1){
             getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, memo1).commit();
         }
         else if (index ==2){
