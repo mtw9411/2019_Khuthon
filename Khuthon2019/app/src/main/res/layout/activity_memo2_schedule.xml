@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/plan_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#5c5c5c"
+        android:lineSpacingExtra="3.6sp"
+        android:text="10:00"
+        android:layout_marginRight="15dp"></TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/plan_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#656565"
+        android:lineSpacingExtra="6.6sp"
+        android:text="칼리보 공항 도착"></TextView>
+        <TextView
+            android:id="@+id/plan_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="#939393"
+            android:lineSpacingExtra="2.2sp"
+            android:text="1번 출구에서 미팅"></TextView>
+    </LinearLayout>
+</LinearLayout>
