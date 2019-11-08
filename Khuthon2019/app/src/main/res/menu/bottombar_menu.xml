@@ -4,20 +4,20 @@
 
     <item
         android:id="@+id/menuitem_bottombar_home"
-        android:icon="@mipmap/ic_launcher_round"
-        android:title="HOME"
+        android:icon="@mipmap/home_navi2"
+        android:title="Home"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menuitem_bottombar_memo"
-        android:icon="@mipmap/ic_launcher_round"
-        android:title="MEMO"
+        android:icon="@mipmap/memo_navi2"
+        android:title="Memo"
         app:showAsAction="ifRoom"
         />
 
     <item
         android:id="@+id/menuitem_bottombar_story"
-        android:icon="@mipmap/ic_launcher_round"
-        android:title="STORY"
+        android:icon="@mipmap/story_navi2"
+        android:title="Story"
         app:showAsAction="ifRoom"/>
 </menu>

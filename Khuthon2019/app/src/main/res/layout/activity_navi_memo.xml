@@ -6,4 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".navi_memo">
 
+    <ImageView
+        android:id="@+id/memo_checklist"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="82dp"
+        android:src="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/memo_plan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:src="@color/colorPrimary"
+        app:layout_constraintStart_toEndOf="@+id/memo_checklist"
+        app:layout_constraintTop_toTopOf="@+id/memo_checklist" />
+
+    <ImageView
+        android:id="@+id/memo_things"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/memo_checklist"
+        app:layout_constraintTop_toBottomOf="@+id/memo_checklist" />
+
+    <ImageView
+        android:id="@+id/memo_food"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:src="@color/design_default_color_primary"
+        app:layout_constraintStart_toEndOf="@+id/memo_things"
+        app:layout_constraintTop_toTopOf="@+id/memo_things" />
 </android.support.constraint.ConstraintLayout>
