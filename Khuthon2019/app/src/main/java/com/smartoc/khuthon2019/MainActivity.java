@@ -73,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction = fragmentManager.beginTransaction();
         switch (n){
             case 0:
-                fragmentTransaction.replace(R.id.Frame_navi, navi_memo);
+                fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out).replace(R.id.Frame_navi, navi_memo);
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null); //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
                 break;
             case 1:
-                fragmentTransaction.replace(R.id.Frame_navi, navi_story);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+                fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out).replace(R.id.Frame_navi, navi_story);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
                 break;
