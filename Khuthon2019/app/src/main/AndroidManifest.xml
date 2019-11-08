@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".navi_story"></activity>
+        <activity android:name=".memo4"></activity>
+        <activity android:name=".memo3" />
+        <activity android:name=".memo2" />
+        <activity android:name=".memo1" />
+        <activity android:name=".navi_story" />
         <activity android:name=".navi_memo" />
         <activity android:name=".navi_home" />
         <activity android:name=".MainActivity">

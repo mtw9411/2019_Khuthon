@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "933749394574",
+    "firebase_url": "https://khuthon2019.firebaseio.com",
+    "project_id": "khuthon2019",
+    "storage_bucket": "khuthon2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933749394574:android:3885f16998c4b003fc4ddf",
+        "android_client_info": {
+          "package_name": "com.smartoc.khuthon2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933749394574-g9mb8k4bp02b8ae2h8ddjpd7lcucipb1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smartoc.khuthon2019",
+            "certificate_hash": "1c8e80eac6bd6689c6a520e97358157bfe357ae6"
+          }
+        },
+        {
+          "client_id": "933749394574-c2cumlit67ad9hlvr19o56acob11rifa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb7f07UoaYJWdoYr_ERRnrSK8SpfkuNhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933749394574-c2cumlit67ad9hlvr19o56acob11rifa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

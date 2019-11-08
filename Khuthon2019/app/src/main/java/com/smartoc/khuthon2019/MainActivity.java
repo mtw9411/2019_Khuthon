@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
     private navi_home navi_home = new navi_home();
     private navi_memo navi_memo = new navi_memo();
     private navi_story navi_story = new navi_story();
+    private memo1 memo1 = new memo1();
+    private memo2 memo2 = new memo2();
+    private memo3 memo3 = new memo3();
+    private memo4 memo4 = new memo4();
+
     private BottomNavigationView bottom_navi;
 
     @Override
@@ -73,6 +78,21 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
                 break;
+        }
+    }
+
+    public void onFragmentchange_memo(int index){
+        if (index ==1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, memo1).commit();
+        }
+        else if (index ==2){
+            getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, memo2).commit();
+        }
+        else if (index ==3){
+            getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, memo3).commit();
+        }
+        else if (index ==4){
+            getSupportFragmentManager().beginTransaction().replace(R.id.Frame_navi, memo4).commit();
         }
     }
 }
